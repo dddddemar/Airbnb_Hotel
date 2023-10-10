@@ -1,8 +1,18 @@
 /* 定义主体颜色变量 */
 :root{
     --primary-color:#ff9854;
+    --van-search-left-icon-color:var(--primary-color) !important;
+    --van-tabs-line-height:30px;
+    --van-calendar-popup-height:100% !important;
+    
 }
 body{
     font-size: 14px;
     
+}
+.icon_check{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background:url(../img/detail/icon_check.png) 0 0 / 100% 100%;
 }

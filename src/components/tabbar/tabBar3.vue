@@ -40,11 +40,17 @@
 <script setup>
 import tabList from "@/assets/data/tabbar.js"
 import getAssetURL from "@/utils/getAssetURL.js"
-import { ref } from "vue"
+import { ref, watch } from "vue"
+import { useRoute } from "vue-router"
 
 
 const currentIndex=ref(0)
-//点击以下修改路由，利用编程式导航  
+//在别的页面，刷新页面后，tabbar的图标和路由保持一致
+const route=useRoute()
+watch(route,(newRoute)=>{
+  const index=tabList.findIndex(item=>item.path===newRoute.path)
+  currentIndex.value=index
+})
 
 
    

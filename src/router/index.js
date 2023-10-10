@@ -28,6 +28,29 @@ const router=createRouter({
         component:()=>import(
             "@/views/order/orderOne.vue"
         )
+    },
+    {
+        path:"/search",
+        component:()=>import(
+            "@/views/search/searchOne.vue"
+        )
+    },
+    {
+        path:"/detail/:id",
+        component:()=>import(
+            "@/views/detail/detailOne.vue"
+        )
+    },
+    {
+        path:"/city",
+        component:()=>import(
+            "@/views/city/cityOne.vue"
+            
+        ),
+        // 利用route获取焦点的租价，并将meta中的hidetabbar引入到appvue的v-if中 来更具路由不同切换组件的隐藏
+        meta:{
+            hideTabBar:true
+        }
     }
     ]
 })
